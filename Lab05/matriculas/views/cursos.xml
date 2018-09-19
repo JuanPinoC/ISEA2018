@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="matriculas.list_cursos_tree">
+      <field name="name">matriculas.cursos.listado.tree</field>
+      <field name="model">matriculas.curso</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="duracion"/>
+          <field name="descripcion"/>
+          <field name="area_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="matriculas.list_cursos_form">
+      <field name="name">matriculas.cursos.listado.form</field>
+      <field name="model">matriculas.curso</field>
+      <field name="arch" type="xml">
+        <form string="Ventana del Curso">
+          <sheet>
+            <field name="name"/>
+            <field name="duracion"/>
+            <field name="descripcion"/>
+            <field name="area_id"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    
+    <record model="ir.actions.act_window" id="matriculas.action_window_cursos">
+      <field name="name">Ventana de cursos</field>
+      <field name="res_model">matriculas.curso</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Cursos" id="matriculas.cursos" parent="matriculas.menu_root"/>
+    
+    <menuitem name="Listado" id="matriculas.cursos_list" parent="matriculas.cursos"
+              action="matriculas.action_window_cursos"/>
+    
+  </data>
+</odoo>

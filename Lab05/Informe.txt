@@ -1,0 +1,249 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 05
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+- Desarrollo del Módulo Convalidaciones:
+
+1. Creación del módulo.
+	1.1. Creación del módulo con el commando scaffold.
+			Captura: 1.1.PNG
+	1.2. Estructura del módulo generado.
+			Captura: 1.2.PNG
+
+2. Creación de modelo y vista: Alumnos.
+	2.1. Modificamos el archivo __manifest__.py con la información del módulo
+		 "Convalidaciones": agregamos una descripción, sitio web, autor y
+		 agregamos la vista "alumnos.xml".
+		 	Captura: 2.1.PNG
+	2.2. En el archivo models.py agregamos el módelo y campos de alumno.
+			Captura: 2.2.PNG
+	2.3. Creamos el archivo alumnos.xml dentro de la carpeta views.
+			Captura: 2.3.PNG
+	2.4. Modificamos la vista de alumnos con los campos especificados en el
+		 modelo.
+		 	Capturas: 
+		 		2.4.1.PNG
+		 		2.4.2.PNG
+
+3. Instalación del módulo.
+	3.1. Reiniciamos los servicios de Odoo.
+			Captura: 3.1.PNG
+	3.2. Revisamos que este activo el modo desarrollador.
+			Captura: 3.2.PNG
+	3.3. En la ventana de aplicaciones, hacemos clic en "Actualizar lista de
+		 aplicaciones".
+		 	Captura: 3.3.PNG
+	3.4. Buscamos el módulo y hacemos clic en "Instalar".
+			Captura: 3.4.PNG
+
+4. Funcionalidad del módulo.
+	4.1. Listado de alumnos.
+			Captura: 4.1.PNG
+	4.2. Creación de un alumno.
+			Capturas:
+				4.2.1.PNG
+				4.2.2.PNG
+
+5. Creación del modelo y vista: Modulos.
+	5.1. Creamos el modelo en models.py.
+			Captura: 5.1.PNG
+	5.2. Desarrollamos la vista para Modulos.
+			Capturas:
+				5.2.1.PNG
+				5.2.2.PNG
+	5.3. Reiniciamos los servicios de Odoo y accedemos al módulo en la opción
+		 Actualizar.
+		 	Captura: 5.3.PNG
+	5.4. Verificamos que se encuentra disponible el listado de módulos.
+			Captura: 5.4.PNG
+	5.5. Creamos un módulo.
+			Captura: 5.5.PNG
+
+*Los siguientes pasoso se basan en el modelo entidad relación del video.
+
+6. Many to One - Creación del modelo y vista: Convalidacion; y modificación de Alumnos.
+	6.1. Agregamos los campos del modelo Alumno en models.py y en la vista
+		 alumnos.xml.
+			Capturas: 
+				6.1.1.PNG
+				6.1.2.PNG
+	6.2. Agregamos el modelo Convalidacion.
+			Captura: 6.2.PNG
+	6.3. Creamos la vista Convalidacion.xml.
+			Capturas:
+				6.3.1.PNG
+				6.3.2.PNG
+	6.4. Reiniciamos el servicio de Odoo, actualizamos la lista de aplicaciones,
+		 y a continuación actualizamos el módulo.
+	6.5. Revisamos la vista de alumnos con los nuevos campos.
+			Captura: 6.5.PNG
+	6.6. Revisamos la vista de convalidaciones.
+			Captura: 6.6.PNG
+	6.7. Creamos una convalidacion.
+			Capturas: 
+				6.7.1.PNG
+				6.7.2.PNG
+				6.7.3.PNG
+
+7. One to Many - Agregando las convalidaciones al listado de alumnos.
+	7.1. Agregamos el campo "convalidacion_ids" al modelo de Alumno para guardar
+		 las convalidaciones de un alumno.
+			Captura: 7.1.PNG
+	7.2. Modificamos la vista de alumnos.
+			Capturas:
+				7.2.1.PNG
+				7.2.2.PNG
+	7.3. Reiniciamos el servicio y actualizamos el módulo.
+		7.3.1. Observamos que en el listado de alumno se ha agregado el campo
+				de convalidaciones.
+					Captura: 7.3.1.PNG
+		7.3.2. Observamos uno de los registros.
+					Captura: 7.3.2.PNG
+		7.3.3. Observamos la ventana de editar registro.
+					Captura: 7.3.3.PNG
+		7.3.4. Agregamos una convalidación para el alumno.
+					Captura: 7.3.4.PNG
+		7.3.5. Verificamos los cambis realizados.
+					Captura: 7.3.5.PNG
+
+8.  Many 2 Many - Creación del modelo y vista de Ciclo.
+	8.1. Agregamos el modelo al archivo models.py.
+			Captura: 8.1.PNG
+	8.2. Agregamos el campo de ids de ciclo a modulo.
+			Captura: 8.2.PNG
+	8.3. Vista de Ciclos.
+			Capturas:
+				8.3.1.PNG
+				8.3.2.PNG
+	8.4. En la vista de Modulos, agregamos el campo de ids de ciclo y la vista
+		 quedará de la siguiente forma.
+		 	Capturas:
+		 		8.4.1.PNG
+		 		8.4.2.PNG
+	8.5. Reiniciamos el servicio y actualizamos el módulo.
+	8.6. Verificamos que se listen los Ciclos.
+			Captura:
+				8.6.PNG
+	8.7. Creación de un registro.
+			Captura:
+				8.7.PNG
+	8.8. Vista del registro creado.
+			Captura:
+				8.8.PNG
+	8.9. Vista de un registro de modulo.
+			Captura:
+				8.9.PNG
+
+- Desarrollo del Módulo Matrículas:
+
+1. Creación del proyecto con el comando scaffold.
+	Captura: 1.PNG
+
+2. Desarrollamos los modelos a partir del esquema de la base de datos en
+	models.py. En los modelos es importante especificar en las foreign keys
+	si son de tipo one2many, many2one o many2many, para crear de forma
+	correcta los modelos.
+	Captura: 2.PNG
+
+3. Desarrollamos la vista de alumnos. En general, las vistas poseen 2 partes,
+	además de las opciones de menú, estas son:
+		-List tree: Son los datos en forma de tabla mostrados al hacer clic en
+			el listado de una entidad de la base de datos.
+		-List form: Son los datos de un registro de una entidad.
+	Capturas:
+		3.1.PNG
+		3.2.PNG
+
+4. Desarrollamos la vista de areas.
+	Captura: 4.PNG
+5. Desarrollamos la vista de cursos.
+	Captura: 5.PNG
+6. Desarrollamos la vista de matriculas.
+	Captura: 6.PNG
+
+7. Modificar el manifest, en el cual se encuentra la descripción y vistas.
+	Captura: 7.PNG
+
+8. Instalación y vistas:
+	8.1. Instalación.
+			Captura: 8.1.PNG
+	8.2. Vista del módulo.
+			Captura: 8.2.PNG
+	8.3. Lista de Áreas.
+			Captura: 8.3.PNG
+	8.4. Editar Área.
+			Captura: 8.4.PNG
+	8.5. Lista de Alumnos.
+			Captura: 8.5.PNG
+	8.6. Editar Alumno.
+			Captura: 8.6.PNG
+	8.7. Lista de Cursos.
+			Captura: 8.7.PNG
+	8.8. Editar Cursos.
+			Captura: 8.8.PNG
+	8.9. Lista de Matriculas.
+			Captura: 8.9.PNG
+	8.10. Editar Matricula.
+			Captura: 8.10.PNG
+
+- PEIT
+1.	¿Qué es el PETI?
+	
+	La PETI (Planeación Estratégica de Tecnologías de Información) es ampliamente reconocida como
+	una herramientapara ordenar los esfuerzos de incorporación de TI. Dicha herramienta establece
+	las políticas requeridas paracontrolar la adquisición, el uso y la administración de los 
+	recursos de TI. Integra la perspectiva de negocios yorganizacional con el enfoque de TI.
+	Estableciendo un desarrollo informático que responde a las necesidades de laorganización y
+	contribuye al éxito de la empresa. Su desarrollo esta relacionado con la creación de una plan
+	detransformación, que va del estado actual en que se encuentra la organización, esto, en 
+	concordancia con laestrategia de negocios y con el propósito de crear una ventaja competitiva.
+	
+	La PETI consiste en proceso de planeación en el que las estrategias sufren una continua
+	adaptación, innovación ycambio, que se refleja ene los elementos funcionales que componen toda
+	la organización. Trabajos relacionadoscon la construcción de un PETI, han sido desarrollado 
+	desde hace tres décadas, pero presenta limitacionesimportantes debido a que en casos hay
+	procesos de RE INGENIERIA en los procesos de la organización, lo cual nosiempre es fácil de
+	realizar.
+
+	Modelos:
+
+		Fase 1 - Situación actual:
+			Es vital realizar un análisis de la situación actual de la empresas establecer su
+			filosofía y doctrina de trabajo.
+
+		Fase 2 - Modelo de negocios y organización:
+			Análisis del entornó, estrategia de negocios, modelo operativo, estructura de la 
+			organización y arquitectura de la información.
+
+		Fase 3 - Modelo de TI:
+			Estretegia de TL, arquitectura tecnológica, arquitectura SL, modelo operativo de TL y 
+			estructura organizacional de TL.		
+
+		Fase 4 - Modelo de planeación:
+			Prioridad de implantación, plan de implementación y administración del riesgo.
+
+- Conclusiones:
+
+	-	En este laboratorio aprendimos a crear módulos en Odoo, a configurar la base de datos a partir
+		de modelos y desarrollamos las vistas de las entidades asi como las relaciones entre ellas.
+	-	Para habilitar las vistas de los módulos, es necesario agregarlos en el array "data" del
+		archivo manifest, en el cual además podemos modificar la descripción, autor y página web del
+		módulo.
+	-	Aprendimos a implementar relaciones One2many, Many2one y Many2many. La primera de ellas, se 
+		refiera a un registro que puede estar ligado a varios registros de otra tabla, la segundo, se
+		refiere a varios registros que pueden estar relacionados a un solo registro de otra entidad y
+		finalmente el tercero, se refiere a varios registros de una entidad que pueden estar ligados a
+		varios registros de otra.
+	-	En el caso de One2many y Many2one la relación entre modelos es hasta cierto punto sencilla,
+		sin embargo, en el caso de Many2many es necesario implementar una tabla intermediaria que
+		contenga en principio los identificadores de las otras dos entidades.
+	-	En los archivos de la carpeta views, agregamos las vistas para los módulos, en ellos 
+		específicamos una vista tree y una vista form, la primera de estas es la que muestra la tabla
+		de listado de registros del modelo y la segunda es la que muestra la información más detallado
+		de un registro al ser seleccionado.
+	-	Al observar el funcionamiento de los módulos con la relación entre entidades, podemos observar
+		que desde la interfaz de edición o creación de una entidad es posible gestionar registros en 
+		otra, debido a las relaciones impuestas con los campos One2many, Many2one y Many2many. También
+		se muestran los registros de los campos foraneos en la vista detallada de un registro.
+	-	Con lo aprendido desarrollamos el diagrama de base de datos, los modelos y las vistas de un
+		módulo de matrículas.
