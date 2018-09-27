@@ -1,0 +1,49 @@
+<openerp>
+  <data>
+    
+    <record model="ir.ui.view" id="peti.list_recursos_tree">
+      <field name="name">peti.recursos.listado.tree</field>
+      <field name="model">peti.recurso</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="tipo"/>
+          <field name="area"/>
+          <field name="tareas">
+            <tree string="Tareas en las que se emplea">
+              <field name="name"/>
+              <field name="horas"/>
+            </tree>
+          </field>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="peti.list_recursos_form">
+      <field name="name">peti.recursos.listado.form</field>
+      <field name="model">peti.recurso</field>
+      <field name="arch" type="xml">
+        <form string="Ventana del Recurso">
+          <sheet>
+            <field name="name"/>
+            <field name="tipo"/>
+            <field name="area"/>
+            <field name="tareas"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="peti.action_window_recursos">
+      <field name="name">Ventana de Recursos</field>
+      <field name="res_model">peti.recurso</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Recursos" id="peti.recursos" parent="peti.menu_root"/>
+
+    <menuitem name="Listado" id="peti.recursos_list" parent="peti.recursos" action="peti.action_window_recursos"/>
+
+  </data>
+</openerp>

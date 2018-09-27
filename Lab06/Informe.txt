@@ -1,0 +1,86 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 06
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+Tarea:
+
+1. Creación del módulo.
+	1.1. Creación por comando.
+			Archivo adjunto: 1.1.JPG
+	1.2. Estructura creada.
+			Archivo adjunto: 1.2.JPG
+
+2.	Ya que para la creación de este módulo, aplicaremos el PETI, basicamente la aplicación está
+	dividida en areas, empleados, recursos y tareas, puesto que, esté módulo servirá para
+	gestionar quien realiza que y como dentro de una empresa. Para esto desarrollamos un MER 
+	adjunto (Archivo adjunto: MER.JPG).
+
+3.	Para continuar, modificamos la descripción y vistas a utilizar en el manifest.
+	Archivo adjunto: 3.JPG
+
+4.	Definimos los modelos y las relaciones de estos desde el archivo models.
+	Archivo adjunto: 4.JPG
+
+5.	Implementamos la vista de Áreas. Es importante destacar que los recursos y empleados pertenecen
+	a un área determinada de la empresa.
+	Archivos adjuntos: 
+		-	Area XML 1.JPG
+		-	Area XML 2.JPG
+
+6.	Implementamos la vista de Empleados. Los empleados son quienes realizarán las tareas designadas.
+	Archivos adjuntos: 
+		-	Empleados XML 1.JPG
+		-	Empleados XML 2.JPG
+
+7.	Implementamos la vista de Recursos. Son los elementos que utilizaran los empleados para llevar 
+	acabo las tareas designadas.
+	Archivos adjuntos: 
+		-	Recursos XML 1.JPG
+		-	Recursos XML 2.JPG
+
+8.	Implementamos la vista de Tareas. Son las actividades en las que participan uno o más empleados 
+	haciendo uso de uno o más recursos en un tiempo definido.
+	Archivos adjuntos: 
+		-	Tareas XML 1.JPG
+		-	Tareas XML 2.JPG
+
+9.	Reiniciamos el servidor, accedemos a modo desarrollador y actualizamos las aplicaciones de Odoo, 
+	luego buscamos el módulo y lo instalamos.
+	Archivos adjuntos: 
+		-	9.1.JPG
+		-	9.2.JPG
+
+10. Revisamos los formularios.
+	Archivos adjuntos: 
+		-	Formulario Area.JPG
+		-	Formulario Empleado.JPG
+		-	Formulario Recurso.JPG
+		-	Formulario Tarea.JPG
+
+11. Revisamos las vistas.
+	Archivos adjuntos: 
+		-	Vista de Area.JPG
+		-	Vista de Recurso.JPG
+		-	Vista de Tarea.JPG
+		-	Vista de Empleado.JPG
+
+12. Revisamos los listados.
+	Archivos adjuntos: 
+		-	Listado Areas.JPG
+		-	Listado Empleados.JPG
+		-	Listado Recursos.JPG
+		-	Listado Tareas.JPG
+
+Conclusiones:
+	-	En este laboratorio continuamos con la creación de módulos en Odoo, creando los modelos para
+		el almacenamiento de la información, desarrollando las vistas y finalmente probando el
+		funcionamiento.
+	-	Definimos las relaciones entre los modelos de la base de datos con las relaciones One2many,
+		Many2one y Many2many, después de crear el módelo entidad relación para la implementación del
+		PETI en forma básica como módulo de Odoo.
+	-	Investigamos más acerca del PETI para poder desarrollar un módulo basado en esta herramienta.
+	-	Para implementar el PETI como módulo abordamos la perspectiva de que el objetivo es organizar
+		y gestionar quien realiza que dentro de la empresa y como.
+	-	A partir de lo antes mencionado modelamos a los actores(empleados), las actividades realizadas
+		(tareas en un tiempo determinado) y que elemento se utilizan(Recursos), además de organizarlos
+		en áreas. 

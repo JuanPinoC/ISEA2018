@@ -1,0 +1,51 @@
+<openerp>
+  <data>
+    
+    <record model="ir.ui.view" id="peti.list_empleados_tree">
+      <field name="name">peti.empleados.listado.tree</field>
+      <field name="model">peti.empleado</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="dni"/>
+          <field name="cargo"/>
+          <field name="area"/>
+          <field name="tareas">
+            <tree string="Tareas del empleado">
+              <field name="name"/>
+              <field name="horas"/>
+            </tree>
+          </field>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="peti.list_empleados_form">
+      <field name="name">peti.empleados.listado.form</field>
+      <field name="model">peti.empleado</field>
+      <field name="arch" type="xml">
+        <form string="Ventana del Empleado">
+          <sheet>
+            <field name="name"/>
+            <field name="dni"/>
+            <field name="cargo"/>
+            <field name="area"/>
+            <field name="tareas"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="peti.action_window_empleados">
+      <field name="name">Ventana de Empleados</field>
+      <field name="res_model">peti.empleado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Empleados" id="peti.empleados" parent="peti.menu_root"/>
+
+    <menuitem name="Listado" id="peti.empleados_list" parent="peti.empleados" action="peti.action_window_empleados"/>
+
+  </data>
+</openerp>

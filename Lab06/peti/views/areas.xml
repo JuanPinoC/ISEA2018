@@ -1,0 +1,56 @@
+<openerp>
+	<data>
+		
+		<record model="ir.ui.view" id="peti.list_areas_tree">
+			<field name="name">peti.areas.listado.tree</field>
+			<field name="model">peti.area</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="descripcion"/>
+					<field name="empleados">
+						<tree string="Empleados del área">
+							<field name="name"/>
+							<field name="cargo"/>
+						</tree>
+					</field>
+					<field name="recursos">
+						<tree string="Recursos del área">
+							<field name="name"/>
+							<field name="tipo"/>
+						</tree>
+					</field>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="peti.list_areas_form">
+			<field name="name">peti.areas.listado.form</field>
+			<field name="model">peti.area</field>
+			<field name="arch" type="xml">
+				<form string="Ventana del Area">
+					<sheet>
+						<field name="name"/>
+						<field name="descripcion"/>
+						<field name="empleados"/>
+						<field name="recursos"/>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+		<record model="ir.actions.act_window" id="peti.action_window_areas">
+			<field name="name">Ventana de Areas</field>
+			<field name="res_model">peti.area</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="peti" id="peti.menu_root"/>
+
+		<menuitem name="Areas" id="peti.areas" parent="peti.menu_root"/>
+
+		<menuitem name="Listado" id="peti.areas_list" parent="peti.areas" action="peti.action_window_areas"/>
+
+	</data>
+</openerp>

@@ -186,23 +186,23 @@ Nombres y apellidos: Juan Manuel Pino Cáceres
 	8.10. Editar Matricula.
 			Captura: 8.10.PNG
 
-- PEIT
+- PETI
 1.	¿Qué es el PETI?
 	
 	La PETI (Planeación Estratégica de Tecnologías de Información) es ampliamente reconocida como
-	una herramientapara ordenar los esfuerzos de incorporación de TI. Dicha herramienta establece
-	las políticas requeridas paracontrolar la adquisición, el uso y la administración de los 
-	recursos de TI. Integra la perspectiva de negocios yorganizacional con el enfoque de TI.
-	Estableciendo un desarrollo informático que responde a las necesidades de laorganización y
+	una herramienta para ordenar los esfuerzos de incorporación de TI. Dicha herramienta establece
+	las políticas requeridas para controlar la adquisición, el uso y la administración de los 
+	recursos de TI. Integra la perspectiva de negocios y organizacional con el enfoque de TI.
+	Estableciendo un desarrollo informático que responde a las necesidades de la organización y
 	contribuye al éxito de la empresa. Su desarrollo esta relacionado con la creación de una plan
-	detransformación, que va del estado actual en que se encuentra la organización, esto, en 
-	concordancia con laestrategia de negocios y con el propósito de crear una ventaja competitiva.
+	de transformación, que va del estado actual en que se encuentra la organización, esto, en 
+	concordancia con la estrategia de negocios y con el propósito de crear una ventaja competitiva.
 	
 	La PETI consiste en proceso de planeación en el que las estrategias sufren una continua
-	adaptación, innovación ycambio, que se refleja ene los elementos funcionales que componen toda
-	la organización. Trabajos relacionadoscon la construcción de un PETI, han sido desarrollado 
-	desde hace tres décadas, pero presenta limitacionesimportantes debido a que en casos hay
-	procesos de RE INGENIERIA en los procesos de la organización, lo cual nosiempre es fácil de
+	adaptación, innovación y cambio, que se refleja ene los elementos funcionales que componen toda
+	la organización. Trabajos relacionados con la construcción de un PETI, han sido desarrollado 
+	desde hace tres décadas, pero presenta limitaciones importantes debido a que en casos hay
+	procesos de RE INGENIERIA en los procesos de la organización, lo cual no siempre es fácil de
 	realizar.
 
 	Modelos:
@@ -216,7 +216,7 @@ Nombres y apellidos: Juan Manuel Pino Cáceres
 			organización y arquitectura de la información.
 
 		Fase 3 - Modelo de TI:
-			Estretegia de TL, arquitectura tecnológica, arquitectura SL, modelo operativo de TL y 
+			Estrategia de TL, arquitectura tecnológica, arquitectura SL, modelo operativo de TL y 
 			estructura organizacional de TL.		
 
 		Fase 4 - Modelo de planeación:

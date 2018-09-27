@@ -1,0 +1,56 @@
+<openerp>
+  <data>
+    
+    <record model="ir.ui.view" id="peti.list_tareas_tree">
+      <field name="name">peti.tareas.listado.tree</field>
+      <field name="model">peti.tarea</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="horas"/>
+          <field name="recursos">
+            <tree string="Recursos utilizados">
+              <field name="name"/>
+              <field name="tipo"/>
+            </tree>
+          </field>
+          <field name="empleados">
+            <tree string="Empleados encargados">
+              <field name="name"/>
+              <field name="cargo"/>
+            </tree>
+          </field>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="peti.list_tareas_form">
+      <field name="name">peti.tareas.listado.form</field>
+      <field name="model">peti.tarea</field>
+      <field name="arch" type="xml">
+        <form string="Ventana del Tarea">
+          <sheet>
+            <field name="name"/>
+            <field name="descripcion"/>
+            <field name="horas"/>
+            <field name="recursos"/>
+            <field name="empleados"/>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="peti.action_window_tareas">
+      <field name="name">Ventana de Tareas</field>
+      <field name="res_model">peti.tarea</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Tareas" id="peti.tareas" parent="peti.menu_root"/>
+
+    <menuitem name="Listado" id="peti.tareas_list" parent="peti.tareas" action="peti.action_window_tareas"/>
+
+  </data>
+</openerp>
