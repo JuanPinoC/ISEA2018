@@ -1,0 +1,89 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 07
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+2.1. Base de datos limpia.
+	2.1.1. Creación de la base de datos en blanco.
+	2.1.2. Inicio de sesión con la base de datos en blanco.
+
+2.2. Empresa ACME con logo de tecsup.
+	2.2.1. Formulario de información de la compañia.
+	2.2.2. Información de ACME.
+	2.2.3. Cambios guardados.
+
+2.3. Creación de productos.
+	2.3.1. Click en el botón crear en productos.
+	2.3.2. Formulario de producto 1.
+	2.3.3. Formulario de producto 2.
+	2.3.4. Formulario de producto 3.
+	2.3.5. Listado de productos.
+	2.3.6. Formulario de importación mediante csv.
+	2.3.7. Configuración de la importación.
+	2.3.8. Listado de productos importados.
+
+2.4. Ajustes de inventario.
+	2.4.1. Click en ajustes de inventario.
+	2.4.2. Click en crear.
+	2.4.3. Formulario de ajustes de inventario.
+	2.4.4. Click en validar.
+	2.4.5. Ajuste validado.
+	2.4.6. Listado de ajustes.
+	2.4.7. Listado de productos.
+
+2.5. Punto de venta.
+	2.5.1. Instalar punto de venta.
+	2.5.2. Vista del módulo punto de venta.
+	2.5.3. Lista de métodos de pago.
+	2.5.4. Formulario de método de pago.
+	2.5.5. Vista del método de pago recien creado.
+
+2.6. Uso del punto de venta.
+	2.6.1. Vista de sesión de punto de venta. (Funcionamiento en: Venta GIF 1 y 2).
+	2.6.2. Listado de pedidos creados.
+	2.6.3. Vista de un pedido.
+
+2.7. Gestión de compras.
+	2.7.1. Instalar gestión de compras.
+	2.7.2. Click en crear solicitud de presupuesto.
+	2.7.3. Formulario de creación de solicitud de presupuesto.
+	2.7.4. Solicitud guardada.
+	2.7.5. Redactar email.
+	2.7.6. Pedido confirmado.
+	2.7.7. Pedido confirmado.
+	2.7.8. Pedido confirmado.
+
+2.8. Recepciones.
+	2.8.1. Recepción.
+	2.8.2. Datos de la recepción.
+	2.8.3. Confirmar entrega parcial.
+	2.8.4. Inventario a mano del producto e inventario previsto.
+	2.8.5. Recepción parcial.
+	2.8.6. Recepción parcial.
+	2.8.7. Recepción completa.
+	2.8.8. Recepción completa.
+	2.8.9. Recepción completa.
+
+2.9. Pago a 2 proveedores.
+	2.9.1. 2 empresas completamente pagadas y una pendiente.
+	2.9.2. Desde la facutra de proveedor clic en registrar pago.
+	2.9.3. Llenamos los datos de pago parcial.
+	2.9.4. Listado con el págo realizado.
+
+*Procedimiento completo de una compra en: Compra GIF.
+
+Observaciones y conclusiones:
+
+- En este laboratorio aprendimos a crear una base de datos en blanco sin datos de demostración
+	en Odoo, accediendo al administrador de bases de datos mediante el navegador. 
+- Asi mismo, repasamos la forma de crear registros de productos en el módulo de inventario y
+	a importar productos de un listado en formato .csv(delimitado por comas), puesto que 
+	muchas empresas ya tienen registros al momento de implementar Odoo y la importación es una
+	forma práctica de subir dichos registros.
+- Aprendimos a utilizar el punto de venta y observamos la vista de cajero, para seleccionar
+	productos y agregarlos a una boleta asi como aplicar descuentos, precios especiales y
+	clientes.
+- Aprendimos a gestionar los pedidos de productos a proveedores y los detalles de estas
+	solicitudes como lo son el pago, las unidades esperadas y recibidas, además del envio de
+	correos a los proveedores.
+- Manejamos el área de recepción de entregas de los proveedores y las opciones que ofrece,
+	como la recepción parcial o completa de los pedidos y la facturación y pago de los mismos.
