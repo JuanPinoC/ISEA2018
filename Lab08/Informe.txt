@@ -1,0 +1,98 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 08
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+2.1. Empresa ACME con logo Tecsup y datos regionales.
+	2.1.1. Hacer click sobre el logo y en la parte de "Editar información del a compáñía"
+			en la esquina superior izquierda.
+	2.1.2. Modificar la información correspondiente y click en Guardar.
+	2.1.3. Revisar los datos modificados.
+
+2.2. Modificación de la plantilla de Pedido de Compras y generación de reporte.
+	2.2.1. En el modo desarrollador, en la ventana "Ajustes", en la opción "Informes",
+			buscamos el elemento que corresponde a "Orden de Compra" en la lista.
+	2.2.2. En "Orden de compra" hacemos click en la opción "Vistas QWeb".
+	2.2.3. Click en report_purchaseorder_document.
+	2.2.4. Observamos los detalles de la vista y el código que define su apariencia,
+			el cual puede ser modificado si es requerido.
+	2.2.5. Desde la opción "Pedido de Compra" en el módulo de "Compras", accedemos a
+			alguno de los elementos de la lista.
+	2.2.6. En la vista de la compra hacemos click en la opción "Imprimir" y "Orden de
+			Compra" en el menú desplegable.
+	2.2.7. El reporte generado en PDF.
+			*Documento adjunto: Pedido.pdf.
+
+2.3. Generar 5 ventas en el módulo Ventas a 3 clientes distintos.
+	2.3.1. Instalamos el módulo "Ventas" e ingresamos a la vista de "Contización" y
+			hacemos click en la opción "Crear".
+	2.3.2. Agregamos los datos como cliente, fecha de caducidad, producto, etc.
+	2.3.3. Agregamos los datos de "Otra información" o dejamos los datos por defecto.
+	2.3.4. Guardamos la cotización y ahora podemos pasar a imprimir o enviar por Email,
+			para que pase a ser un presuspuesto enviado.
+			2.3.4.1. Al imprimir se nos permite escoger una plantilla para la cotización.
+					*Documento adjunto: Cotización.pdf.
+	2.3.5. Luego, confirmamos la venta y observamos que aparecen las opciones de "Crear 
+			Factura" y de "Entrega".
+	2.3.6. Venta confirmada.
+	2.3.7. Venta confirmada.
+	2.3.8. Venta confirmada.
+	2.3.9. Listado.
+			* Proceso de creación: Venta GIF.gif 
+
+2.4. Entrega de ventas.
+	2.4.1. En la cotización hacemos click en la opción "Entrega".
+	2.4.2. Click en editar y modificamos el número de productos realizados.
+	2.4.3. Hacemos click en validar.
+	2.4.4. Entrega validada.
+	2.4.5. De la misma forma se puede crear un pedido parcial para más de una entrega.
+	2.4.6. Entregas parciales:
+		Archivos: 
+			2.4.6.1.PNG
+			2.4.6.2.PNG 
+	2.4.7. Entregas completas:
+		Archivos: 
+			2.4.7.1.PNG
+			2.4.7.2.PNG
+			2.4.7.3.PNG
+
+2.5. Cobros a los clientes.
+	2.5.1. En la opción de "Clientes", vemos las facturaciones que hay por hacer a cada
+			cliente.
+	2.5.2. Desde la vista de un cliente seleccionamos "Ventas".
+	2.5.3. Listado de presupuestos y pedidos, hacemos click en un elemento.
+	2.5.4. En la vista de la venta, hacemos click en Crear Factura.
+	2.5.5. Opciones de facturación, hacemos click en "Crear y Ver Facturas".
+	2.5.6. Finalmente, hacemos click en "Validar".
+	2.5.7. Cobros completos.
+		Archivos:
+			2.5.7.1.PNG
+			2.5.7.2.PNG
+	2.5.8. Cobros con saldo.
+			* Proceso de facturación parcial: Factura parcial GIF.gif 
+
+2.6. Instalación de CRM y oportunidades de venta.
+	2.6.1. Después de instalar el CRM, accedemos a la vista de "Oportunidades".
+	2.6.2. Formulario de creación de oportunidad.
+	2.6.3. Oportunidad creada.
+	2.6.4. Lista de oportunidades.
+
+- Observaciones y conclusiones:
+
+	.	En este laboratorio definimos os datos regionales de la empresa asignada,
+		junto a su logo y verificamos que dicha información se muestre en los reportes.
+
+	.	Generamos reportes de ordenes de compras y revisamos el código para la 
+		generación de los mismos, los cuales pueden ser modificados para mejorar su 
+		apariencia.
+
+	.	Generamos ventas a clientes creados y las confirmamos, a continuación,
+		realizamos el proceso de entregas parciales y completas y generamos las
+		facturas. Asi mismo, revisamos las opciones para imprimir y enviar por email
+		las cotizaciones para luego confirmar las ventas.
+
+	.	Generamos pedidos completos y parciales para los pedidos, por otro lado,
+		generamos las facturas a los clientes para los cobros correspondientes para los
+		pedidos, creando facturas parciales y completas.
+
+	.	Finalmente, instalamos el módulo CRM y creamos distintas oportunidades de venta
+		en diferentes etapas.
