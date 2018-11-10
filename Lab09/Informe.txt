@@ -1,0 +1,79 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 09
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+2.1. Detener el servicio de Odoo e iniciar modo consola.
+	2.1.1.	Abrir la ventana de "Servicios", detener Odoo y configurar el tipo de inicio
+			a modo manual.
+	2.1.2.	Desde la consola de Hyper, iniciamos Odoo utilizando la versión de Python
+			instalada por el mismo Odoo, para evitar escribir la ruta completa de Odoo y
+			Python, se optó por utilizar un archivo ".bat" con los comandos.
+
+2.2. Agregar una carpeta para módulos de terceros.
+	2.2.1.	En la carpeta de instalación de Odoo, al ingresar a la carpeta server, dentro
+			del contenido se encuentra el archivo de configuración de Odoo: odoo.conf.
+	2.2.2.	Editamos dicho archivo para agregar una carpeta para módulos de terceros.
+	2.2.3. Reiniciamos el servicio.
+
+2.3. Descarga e instalación del módulo odoo_web_login.
+	2.3.1.	Descargamos el módulo desde la página de Odoo.
+	2.3.2.	Descomprimimos el contenido del ZIP en la carpeta de módulos de terceros.
+	2.3.3.	Contenido del módulo.
+	2.3.4.	Reiniciamos el servicio de Odoo, a continuación ingresamos en modo
+			desarrollador, actualizamos la lista de aplicaciones e instalamos el módulo.
+	2.3.5.	Cerramos sesión.
+	2.3.6.	Observamos la nueva apariencia del Login.
+
+2.4. Descarga e instalación de un tema.
+	2.4.1.	Descargamos el tema desde la página de Odoo.
+	2.4.2.	Extraemos el archivo ZIP en la carpeta de módulos de terceros y observamos
+			que posee una dependencia.
+	2.4.3.	Reiniciamos el servicio, accedemos a Odoo en modo desarrollador, actulizamos
+			la lista de aplicaciones e instalamos el módulo.
+	2.4.4.	Módulo Ventas.
+	2.4.5.	Menú.
+	2.4.6.	Lista de aplicaciones.
+	2.4.7.	Ajustes.
+
+2.5. Módulo para descargar archivos excel del Stock actual.
+	2.5.1.	Desde la página de Odoo descargamos el módulo, link:
+				https://www.odoo.com/apps/modules/11.0/export_stockinfo_xls/
+	2.5.2.	Descomprimimos el ZIP en la carpeta de módulos.
+	2.5.3.	Instalamos el módulo.
+	2.5.4.	En el módulo de inventario, en la sección de informes ahora se encuentra la
+			opción de "Current Stock in Excel".
+	2.5.5.	Al hacer click en la opción se muestra un formulario para agregar la fuente
+			de datos y de que categorías se desea el reporte.
+	2.5.6.	En este caso la generación de reportes no se pudo completar debido al error
+			mostrado, el cual no fue posible solucionar.
+
+2.6. Módulo que permita agregar ubigeos de Perú (regiones, provincias, distritos).
+	2.6.1.	Decargamos el módulo desde la página:
+				https://www.odoo.com/apps/modules/11.0/odoope_toponyms/
+	2.6.2.	Descomprimimos el ZIP en la carpeta de módulos.
+	2.6.3.	Reiniciamos el servicio, actualizamos los módulos e instalamos el módulo.
+	2.6.4.	Ahora al crear por ejemplo un cliente, y seleccionar el país: Perú.
+	2.6.5.	Al hacer click en Departamento se muestran las opciones.
+
+- Observaciones y conclusiones:
+
+	.	En este laboratorio aprendimos a detener el servicio de Odoo en lso servicios 
+		de windows y a iniciarlo en modo consola, ejecutando odoo-bin con la versión de 
+		python correspondiente.
+
+	.	Descargamos diversos módulos desde la página de Odoo, descomprimimos los ZIP de
+		los módulos en la carpeta de módulos que agregamos al archivo de configuración
+		de Odoo para poder instalarlos y probarlos.
+
+	.	Algunos módulos requieren de depnedencias que suelen venir incluidas al
+		descargar el ZIP, y que se instalan automaticamente junto a dicho módulo.
+
+	.	Entre los módulos disponibles nos encotramos con los son temas para mejorar la 
+		apariencia de Odoo, con una interfaz más colorida y dinámica, otros, agregan 
+		funcionalidad como es el caso del módulo de generación de reportes en Excel, el
+		cual nos permite seleccionar un Warehouse y generar un reporte del stock de
+		productos.
+
+	.	Asi mismo, existen módulos que agregan datos como las ubicaciones con sus
+		respectivos datos para casos más específicos, como pueden ser los ubigeos de un
+		país.
