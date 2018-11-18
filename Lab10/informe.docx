@@ -1,0 +1,136 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 10
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+1. Generar plantilla de módulo.
+	1.1.	Comando para crear el módulo.
+	1.2.	Estructura del módulo.
+	1.3.	Reiniciamos el servicio, actualizamos lista de aplicaciones e instalamos el
+			módulo.
+
+2. Definiendo modelo y campos.
+	2.1.	Definimos el modelo openacademy.course.
+	2.2.	Reiniciamos el servicio y actualizamos el módulo.
+	2.3.	En la opción Ajustes=>Técnico=>Modelos, buscamos el modelo.
+	2.4.	Vista de los campos del modelo.
+
+3. Registros de demostración, vista de listado y formulario por defecto.
+	3.1.	Creación de los registros de demostración.
+	3.2.	Verificar que en el manifest se encuentre invocado el archivo "demo.xml" y
+			cambiar el nombre de la vista por "openacademy.xml".
+	3.3.	Modificamos el contenido de "openacademy.xml".
+	3.4.	Reiniciar el servicio y actualizar la información para ver el listado de 
+			cursos del módulo.
+	3.5.	Vista para editar curso.
+
+4. Formulario perzonalizado.
+	4.1.	Agregamos un formulario perzonalizado en lugar de usar el formulario que
+			crea Odoo por defecto.
+	4.2.	Actualizamos el módulo y observamos la vista del formulario.
+
+5. Vista de búsqueda.
+	5.1.	Agregamos el código para la vista de búsqueda que considere el campo name
+	y el campo description.
+	5.2.	Actualizamos el módulo y probamos la búsqueda.
+			(Archivo GIF)
+
+6. Modelo de sesiones.
+	6.1.	Agregamos el modelo de sessions en models.py.
+	6.2.	Agregamos formulario, listado y menuitem de sessions.
+	6.3.	Formulario creación de sesiones.
+
+7. Relaciones Many2One.
+	7.1.	Agregamos las relaciones a los modelos.
+	7.2.	Agregamos el campo responsible_id en la lista de cursos y la vista de árbol.
+	7.3.	Agregamos course_id e instructor_id al formulario de sesión.
+	7.4.	Agregamos la vista de árbol para las sesiones.
+	7.5.	Actualizamos el módulo y vemos el listado de cursos.
+	7.6.	Formulario de cursos.
+	7.7.	Listado de sesiones.
+	7.8.	Formulario de sesiones.
+
+8. Relaciones One2many.
+	8.1.	Agregamos los session_ids al modelo de cursos.
+	8.2.	Agregamos la vista de sesiones al formulario de cursos.
+	8.3.	Actualizamos el módulo y observamos que las sesiones del curso se pueden ver
+			en el mismo.
+
+9. Relaciones Many2many.
+	9.1.	Agregamos la relación attendee_ids al modelo de sesiones.
+	9.2.	Agregamos el campo al formulario de sesiones.
+	9.3.	Actualizamos y verificamos que en el formulario de sesiones ya se pueden
+			agregar atendees y listarlos.
+
+10. Heredar un modelo.
+	10.1.	Agregamos el modelo heredado partner y lo agregamos al archivo init.
+	10.2.	Agregamos una nueva vista partner.xml y la agregamos al manifest.
+	10.3.	Actualizamos el módulo y observamos el listado de contactos.
+	10.4.	Observamos que los contactos poseen la pestaña des sessions.
+
+11. Dominios.
+	11.1.	Agregamos domain al campo de instructor_id en el modelo de sesiones
+			para que solo se muestren los instructores designados o con un tag que 
+			contenga "Teach".
+	11.2.	Agregamos un listado de tags de contacto
+	11.3.	Se muestran los instructores disponibles para las sesiones de acuerdo a los
+			tag y el listado de tags. (GIF)
+
+12. Campos calculados.
+	12.1.	Agregamos el campo taken_seats al modelo sessions, para poder observar
+			el procentaje de asientos tomados en el campo calculado mediante una 
+			función.
+	12.2.	Agregamos el campo a las vistas con el widget progressbar.
+	12.3.	Listado con progressbar.
+	12.4.	Vista detalle con progressbar.
+
+13. Campos por defecto.
+	13.1.	Agregamos el valor por defecto al campo start_date a la fecha actual y
+			agregamos un nuevo campo active por defecto True.
+	13.2.	Agregamos el campo active al formulario.
+	13.3.	Observamos que al crear el formulario se marca automaticamente el campo
+			active y se coloca la fecha actual.
+
+14. Evento OnChange.
+	14.1.	Agregamos la función onchange al modelo session para cuando se cambia el 
+			número de asistentes a la sesión y que se muestre un alert si es que el 
+			número es negativo o si la cantidad de asistentes es mayor a la de asientos.
+	14.2.	Probando el funcionamiento del método onchange. (GIF)
+
+15. Constraint.
+	15.1.	Agregamos la condición al modelo session de que el instructor no puede ser
+			un asistente y si esto sucede no permita guardar el registro. 
+	15.2.	Probando el funcionamiento del constraint. (GIF)
+
+-	Conclusiones:
+
+	.	En este laboratorio, creamos un nuevo módulo desde cero, definimos los modelos a
+		guardar en la base datos, la lógica de negocio y las interfaces de listado y 
+		formularios.
+
+	.	Creamos relaciones entre los modelos definidos, estas relaciones pueden ser de 3
+		tipos: one2one, un registro relacionado con uno de otro modelo; one2many, un 
+		registro relacionado con varios registros de otro modelo, many2one, el inverso de
+		one2many, y many2many, cuando la relaciones no se limitan a un solo registro en 
+		ningudo de los modelos.
+
+	.	Para la vista de los datos de los modelos, es necesario tener un action de listado
+		(course_list_action), y el formulario y vista de cada registro es generado 
+		automaticamente por Odoo, pero, también es posible crear un formulario más 
+		personalizado manualmente (course_form_view), en este se definen los campos 
+		(fields), entre etiquetas group, notebook, page, etc.
+
+	.	Además agregamos campos de filtro para la busqueda de registros utilizando 
+		course_search_view, en donde definimos los campos de busqueda en la etiqueta search.
+		Por otro lado, las opciones del menú se definen como menuitem y en su atributo 
+		parent, se define al elemento que las contendra.
+
+	.	Aprendimos a heredar uno de los modelos que posee Odoo por defecto, agregamos campos
+		a dicho modelo y una vista desde nuestro módulo creado.
+
+	.	Agregamos condiciones a los campos de los modelos, con ayuda del campo domain, así 
+		mismo, colocamos valores por defecto, con default y creamos campos computados que se
+		calculan en el momento en que se desea mostrar la información más no se guardan en la
+		base datos.
+
+	.	Finalmente, agregamos condiciones para la edición y modificación de registros con 
+		constrains y mensajes de alerta con el metodo onchange.
