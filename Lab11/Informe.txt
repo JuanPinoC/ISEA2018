@@ -1,0 +1,33 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 11
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+2.1. Agregando decoradores en las vistas de Lista.
+	2.1.1.	Modificamos la vista openacademy.xml.
+	2.1.2.	Actaulizamos el módulo y observamos como se resaltan las sesiones en la
+			lista de acuerdo a su duración.
+
+2.2. Agregando vista calendario.
+	2.2.1.	En el archivo models, importamos la libreria datetime, desde timedelta y
+			creamos el campo almacenado end_date.
+	2.2.2.	Definimos la funcióm computada _get_end_date y la función inversa 
+			_set_end_date.
+	2.2.3.	Creamos la vista Calendar.
+	2.2.4.	Prueba del funcionamiento (Vista Calendario.gif).
+
+2.3. Agregando vista Kanban.
+	2.3.1.	Agregamos el campo color al modelo de session.
+	2.3.2.	Implementamos la vista de Kanban en openacademy.xml.
+	2.3.3.	Actualizamos y prueba de funcionamiento (Vista Kanban.gif).
+
+2.4. Agregando filtro de búsqueda.
+	2.4.1.	Agregamos el filtro para que se muestren los cursos de quien observa el
+			el listado.
+	2.4.2.	Definimos le filtro para que se aplique por defecto en el listado.
+	2.4.3.	Actualizamos y probamos el funcionamiento (Filtro Busqueda.gif).
+
+2.5. Agregando vista Reporte.
+	2.5.1.	Creamos el archivo reporte con el código necesario para generar un reporte
+			con el listado de attendees en PDF.
+	2.5.2.	Agregamos el archivo al manifest.
+	2.5.3.	Actualizamos y probamos el funcionamiento (Generar Reporte.gif).

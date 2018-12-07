@@ -1,0 +1,20 @@
+Integración de Sistemas Empresariales Avanzado
+Laboratorio 12
+Nombres y apellidos: Juan Manuel Pino Cáceres
+
+2.1. Grupo de permisos para el módulo OpenAcademy.
+	2.1.1.	Creamos un nuevo usuario.
+	2.1.2.	Le asignamos una contraseña.
+	2.1.3.	Agregamos los permisos en el csv.
+	2.1.4.	Agregamos la vista.
+	2.1.5.	Agregamos los archivos anteriores al manifest.
+	2.1.6.	Verificamos que se muestre el conjunto de permisos y se los agregamos a
+			el usuario creado.
+	2.1.7.	Listado de cursos desde la vista del usuario.
+	2.1.8.	Listado de sesiones desde la vista del usuario.
+
+2.2. Listado de Cursos y Sesiones en el sitio web.
+	2.2.1.	Definimos los controladores para las vistas.
+	2.2.2.	Definimos las vistas.
+	2.2.3.	Agregamos las dependencias.
+	2.2.4.	Probamos el funcionamiento (Sessions & Courses GIF).
